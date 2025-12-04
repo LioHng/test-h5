@@ -139,7 +139,7 @@ function initPageSwitch() {
     if (typeof gsap !== 'undefined' && typeof ScrollToPlugin !== 'undefined') {
       gsap.to(window, {
         scrollTo: { y: element, offsetY: 0 },
-        duration: 0.5,
+        duration: 0.4,
         ease: "linear",
         onComplete: callback || function () { }
       });
