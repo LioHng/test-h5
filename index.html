@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #app {
+      display: flex;
+      gap: 10px;
+      height: 2000px;
+    }
+    .a {
+      flex: 1;
+      background-color: lightblue;
+      height: 100vh;
+    }
+    .b {
+      flex: 1;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="app">
+    <div class="a"></div>
+    <div class="b"></div>
+  </div>
+  <script>
+    const b = document.querySelector('.b');
+    b.style.height = `${window.innerHeight}px`;
+  </script>
+</body>
+</html>
