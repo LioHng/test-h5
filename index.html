@@ -1,40 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    #app {
-      display: flex;
-      gap: 10px;
-      height: 2000px;
-    }
-    .a {
-      flex: 1;
-      background-color: lightblue;
-      height: 100vh;
-    }
-    .b {
-      flex: 1;
-      background-color: lightcoral;
-    }
-  </style>
+  <title>拳皇官网 - 终极丝滑一滚就切</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <!-- 预加载格斗图鉴海报图片 -->
+  <link rel="prefetch" as="image" href="./PEimages/wrestle/flame_poster.png">
+  <link rel="prefetch" as="image" href="./PEimages/wrestle/bernstein_poster.png">
+  <link rel="prefetch" as="image" href="./PEimages/wrestle/kagura_poster.png">
+  <link rel="prefetch" as="image" href="./PEimages/wrestle/serpent_poster.png">
+  <link rel="prefetch" as="image" href="./PEimages/wrestle/shiranui_poster.png">
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/ScrollTrigger.min.js"></script>
+  <script src="./js/ScrollToPlugin.min.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/flexible.js"></script>
 </head>
+
 <body>
-  
+
   <div id="app">
-    <div class="a"></div>
-    <div class="b"></div>
+    <!-- 第一屏 -->
+    <section class="page home">
+      <div class="top_row">
+        <a href="http://www.baidu.com" target="_blank" class="top_download_btn"> </a>
+      </div>
+      <div class="download_btn"></div>
+      <div class="home_decorate_img"></div>
+    </section>
+    <!-- 社团资讯 -->
+    <section class="main_container" >
+      <div class="club_title fade-form-bottom"></div>
+      <div class="club_content fade-form-bottom">
+        <!-- 轮播图 -->
+        <div class="carousel_box ">
+          <div class="border_img"></div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background: #FF9F43;">
+                <a href="http://www.baidu.com/1" target="_blank">
+                  <img src="./PEimages/swiper.png" alt="">
+                </a>
+              </div>
+              <div class="swiper-slide" style="background: #54A0FF;" data-href="http://www.example.com/2"></div>
+              <div class="swiper-slide" style="background: #EE5253;" data-href="http://www.example.com/3"></div>
+              <div class="swiper-slide" style="background: #00D2D3;" data-href="http://www.example.com/4"></div>
+              <div class="swiper-slide" style="background: #5F27CD;" data-href="http://www.example.com/5"></div>
+            </div>
+          </div>
+          <div class="indicator">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <!-- 社团资讯文章 -->
+        <div class="news_box">
+          <div class="tabs">
+            <div class="all_text tab-item text_active" data-tab="all">全部</div>
+            <div class="notice_text tab-item" data-tab="notice">公告</div>
+            <div class="strategy_text tab-item" data-tab="strategy">攻略</div>
+          </div>
+          <div class="mes_list all_mes_list">
+            <div class="mes_item">
+              <div class="headline_icon"></div>
+              <a href="http://www.baidu.com" target="_blank" class="text">· 头条标题新闻新闻预计15字</a>
+              <div class="time"></div>
+            </div>
+            <div class="mes_item">
+              <div class="notice_icon"></div>
+              <a href="http://www.baidu.com" target="_blank" class="text">· 头条标题新闻新闻预计15字</a>
+              <div class="time">11/21</div>
+            </div>
+            <div class="mes_item">
+              <div class="strategy_icon"></div>
+              <a href="http://www.baidu.com" target="_blank" class="text">· 头条标题新闻新闻预计15字</a>
+              <div class="time">11/21</div>
+            </div>
+            <div class="mes_item">
+              <div class="strategy_icon"></div>
+              <a href="http://www.baidu.com" target="_blank" class="text">· 头条标题新闻新闻预计15字</a>
+              <div class="time">11/21</div>
+            </div>
+            <div class="mes_item">
+              <div class="strategy_icon"></div>
+              <a href="http://www.baidu.com" target="_blank" class="text">· 头条标题新闻新闻预计15字</a>
+              <div class="time">11/21</div>
+            </div>
+            <div class="mes_item">
+              <div class="strategy_icon"></div>
+              <a href="http://www.baidu.com" target="_blank" class="text">· 头条标题新闻新闻预计15字</a>
+              <div class="time">11/21</div>
+            </div>
+          </div>
+          <div class="mes_list notice_mes_list" style="display: none;">2</div>
+          <div class="mes_list strategy_mes_list" style="display: none;">3</div>
+        </div>
+      </div>
+      <!-- 格斗图鉴 -->
+      <div class="wrestle_content">
+        <div class="wrestle_title fade-form-bottom"></div>
+        <div class="wrestle_main_content flame_selected fade-form-bottom">
+          <div class="options_box">
+            <div class="option_item flame_option"></div>
+            <div class="option_item bernstein_option"></div>
+            <div class="option_item kagura_option"></div>
+            <div class="option_item serpent_option"></div>
+            <div class="option_item shiranui_option"></div>
+        </div>
+        </div>
+      </div>
+      <!-- 精彩内容 -->
+      <div class="excellent_content" style="overflow: hidden;">
+        <!-- 精彩内容 - 标题 -->
+        <div class="fade-form-bottom excellent_content_title"></div>
+        <!-- 精彩内容 - 轮播 -->
+        <div class="carousel-container fade-form-bottom">
+          <div class="carousel-btn prev_icon"></div>
+          <div class="carousel-btn next_icon"></div>
+          <div class="carousel-track">
+            <div class="carousel-item" data-index="0">
+              <div class="card-placeholder">
+                <img src="./PEimages/excellent/excellent_img_1.png" alt="">
+              </div>
+            </div>
+            <div class="carousel-item" data-index="1">
+              <div class="card-placeholder">
+                <img src="./PEimages/excellent/excellent_img_2.png" alt="">
+              </div>
+            </div>
+            <div class="carousel-item" data-index="2">
+              <div class="card-placeholder">
+                <img src="./PEimages/excellent/excellent_img_3.png" alt="">
+              </div>
+            </div>
+            <div class="carousel-item" data-index="3">
+              <div class="card-placeholder">
+                <img src="./PEimages/excellent/excellent_img_4.png" alt="">
+              </div>
+            </div>
+            <div class="carousel-item" data-index="4">
+              <div class="card-placeholder">
+                <img src="./PEimages/excellent/excellent_img_5.png" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- 精彩内容星星装饰 -->
+          <div class="excellent_content_star-1"></div>
+          <div class="excellent_content_star-2"></div>
+          <div class="excellent_content_star-3"></div>
+        </div>
+      </div>
+      <!-- 底部-电话/二维码 -->
+      <div class="footer_content">
+        <div class="game_icon"></div>
+        <div class="wx_official_accounts">
+          <div class="wx_icon qrCode_border-2">
+            <img src="./PEimages/00.jpg" alt="">
+          </div>
+          <div class="wx_accounts_text">
+            <img style="width: 0.74rem;height: 0.12rem;" src="./PEimages/wx_accounts_text.png" alt="">
+          </div>
+        </div>
+        <div class="official_community">
+          <div class="official_icon qrCode_border-2">
+            <img src="./PEimages/00.jpg" alt="">
+          </div>
+          <div class="official_community_text">
+            <img style="width: 0.56rem;height: 0.12rem;" src="./PEimages/official_community_text.png" alt="">
+          </div>
+        </div>
+        <div class="link_service">
+          <div class="link_service_icon qrCode_border-2">
+            <img src="./PEimages/00.jpg" alt="">
+          </div>
+          <div class="link_service_text">
+            <img style="width: 0.56rem;height: 0.12rem;" src="./PEimages/link_service_text.png" alt="">
+          </div>
+        </div>
+        <div class="service_phone"> </div>
+      </div>
+    </section>
   </div>
-  <script>
-    const b = document.querySelector('.b');
-    b.style.height = `${window.innerHeight}px`;
-  </script>
+
+
+  <script src="./js/index.js"></script>
 </body>
+
 </html>
